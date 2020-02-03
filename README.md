@@ -46,6 +46,8 @@ This boilerplate has implemented a to-do app. Every user has his own to-do items
 #### Normal speed:
 ![](https://i.giphy.com/kH0ogTmdnUYIDwiPeT.gif)
 
+The to-do list data, also stored on Redux store, is optimized. If the previous fetch request was made with more than the 5 seconds (tolerance value constant), a new API call will be made. If not, the previous loaded data will be shown, avoiding unnecessary API calls. 
+
 This stack is currently my favorite to work with and I think with that use case (to-do) it's easier to start a project with those technologies already configured and ready for use. This project it might be also interesting for those who wants to learn/better understand how those technologies works.
 
 ### Commands:
