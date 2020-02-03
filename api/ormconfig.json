@@ -1,0 +1,18 @@
+{
+  "name": "default",
+  "type": "mysql",
+  "host": "localhost",
+  "port": 3307,
+  "username": "root",
+  "password": "123123",
+  "database": "ts-boilerplate",
+  "synchronize": false,
+  "entities": ["src/entities/*.ts"],
+  "migrations": ["src/migration/**/*.ts"],
+  "subscribers": ["src/subscriber/**/*.ts"],
+  "cli": {
+    "entitiesDir": "src/entity",
+    "migrationsDir": "src/migration",
+    "subscribersDir": "src/subscriber"
+  }
+}

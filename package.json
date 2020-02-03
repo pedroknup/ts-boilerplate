@@ -1,0 +1,19 @@
+{
+  "name": "ts-fullstack-boilerplate",
+  "version": "1.0.0",
+  "description": "TS boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "install": "cd api && npm install && cd ../app && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedroknup/ts-boilerplate"
+  },
+  "author": "Pedro Knup",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedroknup/ts-boilerplate/issues"
+  },
+  "homepage": "https://github.com/pedroknup/ts-boilerplate#readme"
+}

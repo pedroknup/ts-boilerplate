@@ -1,0 +1,9 @@
+.input {
+  display: contents;
+  margin: 4px 0;
+  &-error {
+    color: red;
+    line-height: 20px;
+    font-size: 14px;
+  }
+}

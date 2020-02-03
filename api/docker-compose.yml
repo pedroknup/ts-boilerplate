@@ -1,0 +1,17 @@
+version: "3"
+services:
+  web-service:
+    container_name: web-service
+    build:
+      context: .
+    ports:
+      - "3001:3001"
+    depends_on:
+      - database
+    links:
+      - database
+  database:
+    container_name: database
+    build: ./src/db
+    ports:
+      - 3307:3306

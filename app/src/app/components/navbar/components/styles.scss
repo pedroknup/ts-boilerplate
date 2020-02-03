@@ -1,0 +1,40 @@
+$dark-gray: #6d6d6d;
+.navbar {
+  color: $dark-gray;
+  height: 56px;
+  flex: 1;
+  cursor: unset;
+  // background-color: #52c6e6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  &-title{
+    text-transform: capitalize;
+  }
+  div {
+    display: flex;
+    align-items: center;
+  }
+  svg {
+    height: auto;
+    color: $dark-gray;
+  }
+  &-icon {
+    min-width: 24px;
+    margin: 0 4px;
+    cursor: pointer;
+    &.user {
+      img {
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        border: 1px solid rgb(223, 223, 223);
+      }
+    }
+  }
+
+  &-title {
+    margin-left: 16px;
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "ts-jwt-express-typeorm",
+  "version": "0.0.1",
+  "description": "Node Web Service project written in Typescript",
+  "devDependencies": {
+    "@types/node": "^8.0.29",
+    "express-swagger-generator": "^1.1.15",
+    "swagger-annotations": "git+https://github.com/outbrain/swagger-annotations.git",
+    "ts-node": "3.3.0",
+    "typeorm-model-generator": "^0.3.5",
+    "typescript": "2.5.2"
+  },
+  "dependencies": {
+    "@tgdn/react-dropdown": "0.0.7",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/body-parser": "^1.17.0",
+    "@types/cors": "^2.8.4",
+    "@types/helmet": "0.0.42",
+    "@types/jsonwebtoken": "^8.3.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.1",
+    "class-validator": "^0.9.1",
+    "cors": "^2.8.5",
+    "express": "^4.15.4",
+    "helmet": "^3.15.0",
+    "jsonwebtoken": "^8.4.0",
+    "reflect-metadata": "^0.1.10",
+    "ts-node-dev": "^1.0.0-pre.32",
+    "typeorm": "0.2.12"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "start": "set debug=* && ts-node-dev --respawn --transpileOnly ./src/index.ts",
+    "prod": "tsc && node ./build/app.js",
+    "generate-models": "npx typeorm-model-generator -h localhost -d ts-boilerplate -p 3307 -u root -x 123123 -e mysql -o src && ts-node ./scripts/post-generated-models.ts",
+    "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run"
+  }
+}

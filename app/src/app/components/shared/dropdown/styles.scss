@@ -1,0 +1,47 @@
+.dropdown {
+  position: relative;
+  align-items: start;
+  &-content {
+  }
+  &-tooltip {
+    visibility: hidden;
+    border-radius: 2px;
+    color: black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 8px;
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    &.open {
+      visibility: visible;
+    }
+    span {
+      overflow: hidden;
+      padding: 8px 16px;
+      width: 100%;
+    }
+    span.disabled {
+      color: #cacaca;
+      cursor: default;
+      z-index: 11;
+    }
+    span.divider {
+      min-height: 1px;
+      min-width: 100%;
+      padding: 0;
+      background-color: #cacaca;
+      flex: 1;
+    }
+    span.item {
+      cursor: pointer;
+      &:hover {
+        background-color: #e6e6e6;
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+.or {
+  margin: 32px 0;
+  display: flex;
+  flex-direction: column;
+  p {
+    text-transform: uppercase;
+    margin: auto;
+    color: #777;
+    text-align: center;
+    background-color: white;
+    width: 40px;
+    position: relative;
+    z-index: 1;
+  }
+  &::after {
+    content: '';
+    z-index: 0;
+    width: 100%;
+    border-bottom: 1px solid rgb(173, 173, 173);
+    margin-top: -12px;
+    display: block;
+  }
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.button {
+  margin: 8px 0 !important;
+  background-color: #007acc !important;
+  &-back{
+    background-color: transparent !important;
+  }
+  &-facebook {
+    color: white !important;
+    background-color: #3b5998 !important;
+  }
+  &-twitter {
+    color: white !important;
+    background-color: #1da1f2 !important;
+  }
+  &-google {
+    color: white !important;
+    background-color: #db4437 !important;
+  }
+  &-linkedin {
+    color: white !important;
+    background-color: #0e76a8 !important;
+  }
+}
+
+.error-message{
+  color: red;
+}
+.forgot-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login {
+  &-content {
+    display: flex;
+    flex-direction: column;
+    h3{
+      text-align: center;
+    }
+  }
+}
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  background-color: #f0f0f0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  a {
+    cursor: pointer;
+    color: #007acc;
+    &:hover{
+      color: #006ab1;
+      text-decoration: underline;
+    }
+  }
+}
+
+.create-account {
+  margin: 32px auto;
+  margin-bottom: 16px;
+}

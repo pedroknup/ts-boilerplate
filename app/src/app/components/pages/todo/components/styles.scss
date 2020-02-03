@@ -1,0 +1,95 @@
+.settings-container {
+  margin: auto;
+}
+
+.todo {
+  &-container {
+  }
+  &-form {
+    margin: 8px 0;
+  }
+  &-item {
+    line-height: 32px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    display: flex;
+    flex-direction: column;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    &-content {
+      display: inline;
+      padding: 8px 8px;
+      position: relative;
+      span {
+        cursor: pointer;
+      }
+      svg {
+        color: #dadada;
+      }
+      &-checkbox {
+        margin-right: 8px;
+      }
+      &.checked {
+        &:first-child {
+          color: #007acc;
+        }
+        span {
+          text-decoration: line-through;
+          color: #dadada;
+        }
+      }
+      .right {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+      }
+      &.loading {
+        > * {
+          opacity: 0.2;
+        }
+        .fa-spin {
+          color: black;
+          opacity: 1 !important;
+        }
+      }
+      &-delete {
+        visibility: hidden;
+        cursor: pointer;
+        &:hover {
+          color: black;
+        }
+      }
+      &:hover {
+        .todo-item-content-delete {
+          visibility: visible;
+        }
+      }
+    }
+    &-description {
+      transition: max-height 200ms ease;
+      &.closed {
+        max-height: 0px;
+      }
+      &.open {
+        max-height: 500px;
+      }
+    }
+  }
+}
+
+input {
+  background-color: transparent;
+  &:focus {
+    outline: none;
+  }
+  border: 0;
+  box-shadow: 0;
+  padding: 8px 12px 8px 0;
+  font-size: 16px;
+  margin: auto;
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
