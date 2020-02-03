@@ -33,17 +33,17 @@ This boilerplate has implemented a to-do app. Every user has his own to-dos.
 
 #### Interesting features: 
 - Dynamic expandable sidebar with a toggle state (state managed by Redux):
-    ![](https://i.giphy.com/kyowCvm0oWAvDk3Fbj.gif)
+<img align="left" src="https://i.giphy.com/kyowCvm0oWAvDk3Fbj.gif">
 
 - Responsiveness:
-    ![](https://i.giphy.com/f9lFppmIGCnbv0QHJ3.gif)
+<img align="left" src="https://i.giphy.com/f9lFppmIGCnbv0QHJ3.gif">
 
 
 - Individual to-do asynchronous API calls:
 	 - Internet connection slowed down to a low-tier speed (to better see the to-do's individuallity):
-	    ![](https://i.giphy.com/kyid9gcBQFpVzypjMa.gif)
+      <img align="left" src="https://i.giphy.com/kyid9gcBQFpVzypjMa.gif">
 	 - Normal speed:
-	    ![](https://i.giphy.com/kH0ogTmdnUYIDwiPeT.gif)
+      <img align="left" src="https://i.giphy.com/kH0ogTmdnUYIDwiPeT.gif">
 
 This stack is currently my favorite to work with and I think with that use case (to-do) it's easier to start a project with those technologies already configured and ready for use. This project it might be also interesting for those who wants to learn/better understand how those technologies works.
 
@@ -56,12 +56,12 @@ On client/web service: `npm start` to start the service.
 
 ### To-do:
 
-    [ ] Client: refactor the code putting all the API calls on its respectives middlewares thunks, and not in redux middleware.
-    [ ] Client: remove inline styles creating proper style classes on a scss file.
-    [ ] API: refactor the code making it run time exception proof (try-catch).
-    [ ] Create enviroment variables to explicitly set the database's auth data, services ports etc. For now everything is statically declarated. Not epic.
-    [ ] Client: refactor the reducer's implementation.
-    [ ] Unit tests implementation.
+- [ ] Client: refactor the code putting all the API calls on its respectives middlewares thunks, and not in redux middleware.
+- [ ] Client: remove inline styles creating proper style classes on a scss file.
+- [ ] API: refactor the code making it run time exception proof (try-catch).
+- [ ] Create enviroment variables to explicitly set the database's auth data, services ports etc. For now everything is statically declarated. Not epic.
+- [ ] Client: refactor the reducer's implementation.
+- [ ] Unit tests implementation.
 
 
 Pull requests are very welcome! If you have any suggestions, please tell me or create a PR. Feel free to fork this repository as well :)
