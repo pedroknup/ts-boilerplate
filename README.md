@@ -68,6 +68,7 @@ On client/web service: `npm start` to start the service.
 - [ ] Create environment variables to explicitly set the database's auth data, services ports etc. For now everything is statically declared. Not epic.
 - [ ] Client: refactor the reducer's implementation.
 - [ ] Unit tests implementation.
+- [ ] Client: refactor some components to improve the readability.
 - [ ] Client: change thumbnail 😅
 
 
