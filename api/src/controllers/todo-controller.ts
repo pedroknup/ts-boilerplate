@@ -9,7 +9,6 @@ import { IsBooleanString } from "class-validator";
 class BetController {
   static listAll = async (req: Request, res: Response) => {
     const id = res.locals.jwtPayload.userId;
-
     const userRepository = getRepository(user);
     const foundUser = await userRepository.findOne(id);
     const betRepository = getRepository(todo);
@@ -23,7 +22,6 @@ class BetController {
   static createTodo = async (req: Request, res: Response) => {
     const id = res.locals.jwtPayload.userId;
     const { description, name } = req.body;
-    console.log("BODY", req.body);
     const userRepository = getRepository(user);
     const foundUser = await userRepository.findOne(id);
     const todoRepository = getRepository(todo);
@@ -43,7 +41,6 @@ class BetController {
     foundTodo.name = content;
     foundTodo.isDone = !!isDoneNumber;
     const savedTodo = await todoRepository.save(foundTodo);
-    console.log("todo", foundTodo);
     res.status(200).send(savedTodo);
   };
 

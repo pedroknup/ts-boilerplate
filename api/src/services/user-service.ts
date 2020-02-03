@@ -10,7 +10,6 @@ class UserService {
   };
   static getUserByEmail = async (email: string): Promise<user> => {
     const userRepository = getRepository(user);
-    console.log("looking for email", email);
     return userRepository.findOneOrFail({
       where: { email },
       relations: ["role"]
