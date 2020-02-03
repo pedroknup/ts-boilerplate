@@ -32,18 +32,20 @@ We are going to start this project with SQLite. I don’t recommend keeping it f
 This boilerplate has implemented a to-do app. Every user has his own to-dos.
 
 #### Interesting features: 
-- Dynamic expandable sidebar with a toggle state (state managed by Redux):
+
+Dynamic expandable sidebar with a toggle state (state managed by Redux):
 ![](https://i.giphy.com/kyowCvm0oWAvDk3Fbj.gif)
 
-- Responsiveness:
+Responsiveness:
 ![](https://i.giphy.com/f9lFppmIGCnbv0QHJ3.gif)
 
-- Individual to-do asynchronous API calls:
-	- Internet connection slowed down to a low-tier speed (to better see the to-do's individuality):
-  ![](https://i.giphy.com/kyid9gcBQFpVzypjMa.gif)
+Individual to-do asynchronous API calls:
 
-	- Normal speed:
-  ![](https://i.giphy.com/kH0ogTmdnUYIDwiPeT.gif)
+Internet connection slowed down to a low-tier speed (to better see the to-do's individuality):
+![](https://i.giphy.com/kyid9gcBQFpVzypjMa.gif)
+
+- Normal speed:
+![](https://i.giphy.com/kH0ogTmdnUYIDwiPeT.gif)
 
 This stack is currently my favorite to work with and I think with that use case (to-do) it's easier to start a project with those technologies already configured and ready for use. This project it might be also interesting for those who wants to learn/better understand how those technologies works.
 
