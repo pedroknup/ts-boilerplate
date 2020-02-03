@@ -4,12 +4,12 @@
 
 Note: This boilerplate is still under construction. Some functionalities might be not finished or polished.
 
-A complete NodeJS + TypeScript boilerplate made with React + Redux + Swagger Model generator + SCSS + Material UI (client) and ExpressJS + TypeORM + Swagger Documentation generator + JWT authentication and role based authorization. It's configured to work as containers as well (docker-compose). I've configured Swagger to automatically create a documentation for the API and, with that, automatically generate API classes on the client side. In that way, to make API calls on the client, we just need to call the API generated class' methods! Very cool, right?
+A complete NodeJS + TypeScript boilerplate made with React + Redux + Swagger Model generator + SCSS + Material UI (client) and ExpressJS + TypeORM + Swagger Documentation generator + JWT authentication and role based authorization (web service). It's configured to work as containers as well (docker-compose). I've configured Swagger to automatically create a documentation for the API and, with that, automatically generate API classes on the client side. In that way, to make API calls on the client, we just need to call the API generated class' methods! Very cool, right?
 
 
 ## Web Service
 
-This RESTful Web Service makes use of TypeORM to automatically generate models based on our database. In that way, we can deal with our stored data as objects, ideal for a typed environment (TypeScript). All (or almost all) endpoints are previously validated and authenticated via a middleware. So if the request doesn't have a valid token (JWT), it will return a 401/403 code right away. If the token is valid, the controller will receive the authenticated user and, at that point, it's guaranteed the user is properly authenticated.
+This RESTful Web Service makes use of TypeORM to automatically generate models based on our database. In that way, we can deal with our stored data as objects, ideal for a typed environment (TypeScript). Every (or almost) endpoints are previously validated and authenticated via a middleware. So if the request doesn't have a valid token (JWT), it will return a 401/403 code right away. If the token is valid, the controller will receive the authenticated user and, at that point, it's guaranteed the user is properly authenticated.
 
 *What is a JWT and why we use it to make stateless authentications*
 [*5 Easy Steps to Understanding JSON Web Tokens (JWT)*
@@ -25,11 +25,10 @@ TypeORM allows you to write only one TypeScript Class and, with the synchronize 
 
 It is compatible with MySQL / MariaDB / Postgres / SQLite / Microsoft SQL Server / Oracle / sql.js / MongoDB. You can switch between those databases without having to rewrite your code.
 
-We are going to start this project with SQLite. I don’t recommend keeping it for production. But, because I don’t know what DB you are going to use, it allows us to make a generic project that you can run with just “npm install”, without having to setup a database server.
 
 ## Application
 
-This boilerplate has implemented a to-do app. Every user has his own to-dos.
+This boilerplate has implemented a to-do app. Every user has his own to-do items.
 
 ### Interesting features: 
 
