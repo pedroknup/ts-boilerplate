@@ -23,7 +23,6 @@ export const TodoComponent = (props: ITodoComponentProps & TodoContainerProps) =
 
   React.useEffect(() => {
     const now = new Date();
-
     if (
       !props.updatedAt ||
       (props.updatedAt && now.getTime() - props.updatedAt.getTime() > TOLERANCE_MS)
