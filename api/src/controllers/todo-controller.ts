@@ -1,10 +1,7 @@
 import { Request, Response } from "express";
 import { getRepository } from "typeorm";
-
 import { user } from "../entities/user";
-import { hashPassword } from "../utils";
 import { todo } from "../entities/todo";
-import { IsBooleanString } from "class-validator";
 
 class BetController {
   static listAll = async (req: Request, res: Response) => {
@@ -30,7 +27,7 @@ class BetController {
     todoToAdd.name = name;
     todoToAdd.user = foundUser;
     const savedTodo = await todoRepository.save(todoToAdd);
-    res.status(200).send(savedTodo);
+    res.status(200).send({ ...savedTodo, user: null });
   };
 
   static editTodo = async (req: Request, res: Response) => {
@@ -41,7 +38,7 @@ class BetController {
     foundTodo.name = content;
     foundTodo.isDone = !!isDoneNumber;
     const savedTodo = await todoRepository.save(foundTodo);
-    res.status(200).send(savedTodo);
+    res.status(200).send({ ...savedTodo, user: null });
   };
 
   static deleteTodo = async (req: Request, res: Response) => {
@@ -61,7 +58,7 @@ class BetController {
     // if this code is reached, it means the user is authenticated and valid, so no needs to check if the foundUser is null
     if (foundTodo.user && foundTodo.user.id === foundUser.id) {
       await todoRepository.delete(todoId);
-      res.status(200).send(foundTodo);
+      res.status(200).send({ ...foundTodo, user: null });
     } else {
       res.status(401).send(`You don't have rights to do that`);
     }

@@ -12,9 +12,15 @@ class UserController {
     const users = await userRepository.find({
       select: ["id", "email", "role"] //We dont want to send the passwords on response
     });
+    const mappedUsers = users.map(item => {
+      return {
+        ...item,
+        password: ""
+      };
+    });
 
-    //Send the users object
-    res.send(users);
+    //Send the mappedUsers object
+    res.send(mappedUsers);
   };
 
   static getOneById = async (req: Request, res: Response) => {
@@ -25,13 +31,11 @@ class UserController {
     const userRepository = getRepository(user);
     try {
       const foundUser = await userRepository.findOneOrFail(id);
-      res.send(foundUser);
+      res.send({ ...foundUser, password: "" });
     } catch (error) {
       res.status(404).send("User not found");
     }
   };
-
-  
 
   static editUser = async (req: Request, res: Response) => {
     //Get the ID from the url
