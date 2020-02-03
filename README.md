@@ -33,17 +33,17 @@ This boilerplate has implemented a to-do app. Every user has his own to-dos.
 
 #### Interesting features: 
 - Dynamic expandable sidebar with a toggle state (state managed by Redux):
-<img align="left" src="https://i.giphy.com/kyowCvm0oWAvDk3Fbj.gif">
+![](https://i.giphy.com/kyowCvm0oWAvDk3Fbj.gif)
 
 - Responsiveness:
-<img align="left" src="https://i.giphy.com/f9lFppmIGCnbv0QHJ3.gif">
-
+![](https://i.giphy.com/f9lFppmIGCnbv0QHJ3.gif)
 
 - Individual to-do asynchronous API calls:
-	 - Internet connection slowed down to a low-tier speed (to better see the to-do's individuality):
-      <img align="left" src="https://i.giphy.com/kyid9gcBQFpVzypjMa.gif">
-	 - Normal speed:
-      <img align="left" src="https://i.giphy.com/kH0ogTmdnUYIDwiPeT.gif">
+	- Internet connection slowed down to a low-tier speed (to better see the to-do's individuality):
+  ![](https://i.giphy.com/kyid9gcBQFpVzypjMa.gif)
+
+	- Normal speed:
+  ![](https://i.giphy.com/kH0ogTmdnUYIDwiPeT.gif)
 
 This stack is currently my favorite to work with and I think with that use case (to-do) it's easier to start a project with those technologies already configured and ready for use. This project it might be also interesting for those who wants to learn/better understand how those technologies works.
 
@@ -60,6 +60,8 @@ On client/web service: `npm start` to start the service.
 - [ ] Client: refactor the code putting all the API calls on its respective middleware thunks, and not in redux middleware.
 - [ ] Client: remove inline styles creating proper style classes on a scss file.
 - [ ] API: refactor the code making it run time exception proof (try-catch).
+- [ ] API: optimize endpoint outputs.
+- [ ] Make all file names consistent.
 - [ ] Create environment variables to explicitly set the database's auth data, services ports etc. For now everything is statically declared. Not epic.
 - [ ] Client: refactor the reducer's implementation.
 - [ ] Unit tests implementation.
