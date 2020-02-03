@@ -7,9 +7,9 @@ Note: This boilerplate is still under construction. Some functionalities might b
 A complete NodeJS + TypeScript boilerplate made with React + Redux + Swagger Model generator + SCSS + Material UI (client) and ExpressJS + TypeORM + Swagger Documentation generator + JWT authentication and role based authorization. It's configured to work as containers as well (docker-compose). I've configured Swagger to automatically create a documentation for the API and, with that, automatically generate API classes on the client side. In that way, to make API calls on the client, we just need to call the API generated class' methods! Very cool, right?
 
 
-##Web Service
+## Web Service
 
-This RESTful Web Service makes use of TypeORM to automatically generate models based on our database. In that way, we can deal with our stored data as objects, ideal for a typed enviroment (TypeScript). All (or almost all) endpoints are previously validated and authenticated via a middleware. So if the request doesn't have a valid token (JWT), it will return a 401/403 code right away on the first middleware. If the token is valid, the controller will receive the authenticated user and at that point, it's guaranteed the user is properly authenticated.
+This RESTful Web Service makes use of TypeORM to automatically generate models based on our database. In that way, we can deal with our stored data as objects, ideal for a typed environment (TypeScript). All (or almost all) endpoints are previously validated and authenticated via a middleware. So if the request doesn't have a valid token (JWT), it will return a 401/403 code right away. If the token is valid, the controller will receive the authenticated user and, at that point, it's guaranteed the user is properly authenticated.
 
 *What is a JWT and why we use it to make stateless authentications*
 [*5 Easy Steps to Understanding JSON Web Tokens (JWT)*
@@ -40,7 +40,7 @@ This boilerplate has implemented a to-do app. Every user has his own to-dos.
 
 
 - Individual to-do asynchronous API calls:
-	 - Internet connection slowed down to a low-tier speed (to better see the to-do's individuallity):
+	 - Internet connection slowed down to a low-tier speed (to better see the to-do's individuality):
       <img align="left" src="https://i.giphy.com/kyid9gcBQFpVzypjMa.gif">
 	 - Normal speed:
       <img align="left" src="https://i.giphy.com/kH0ogTmdnUYIDwiPeT.gif">
@@ -56,15 +56,16 @@ On client/web service: `npm start` to start the service.
 
 ### To-do:
 
-- [ ] Client: refactor the code putting all the API calls on its respectives middlewares thunks, and not in redux middleware.
+- [ ] Sign In and forget password features. 
+- [ ] Client: refactor the code putting all the API calls on its respective middleware thunks, and not in redux middleware.
 - [ ] Client: remove inline styles creating proper style classes on a scss file.
 - [ ] API: refactor the code making it run time exception proof (try-catch).
-- [ ] Create enviroment variables to explicitly set the database's auth data, services ports etc. For now everything is statically declarated. Not epic.
+- [ ] Create environment variables to explicitly set the database's auth data, services ports etc. For now everything is statically declared. Not epic.
 - [ ] Client: refactor the reducer's implementation.
 - [ ] Unit tests implementation.
 
 
-Pull requests are very welcome! If you have any suggestions, please tell me or create a PR. Feel free to fork this repository as well :)
+Pull requests are very welcome! If you have any suggestions, please get in touch or create a PR. Feel free to fork this repository as well :)
 
 
 
