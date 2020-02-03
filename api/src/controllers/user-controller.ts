@@ -1,9 +1,7 @@
 import { Request, Response } from "express";
 import { getRepository } from "typeorm";
 import { validate } from "class-validator";
-
 import { user } from "../entities/User";
-import { hashPassword } from "../utils";
 
 class UserController {
   static listAll = async (req: Request, res: Response) => {

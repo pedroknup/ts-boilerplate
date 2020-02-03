@@ -1,5 +1,5 @@
 import { Router } from "express";
-import AuthController from "../controllers/AuthController";
+import AuthController from "../controllers/auth-controller";
 import { checkJwt } from "../middlewares/checkJwt";
 
 interface ILoginBody {
