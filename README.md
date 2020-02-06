@@ -9,7 +9,7 @@ A complete NodeJS + TypeScript boilerplate made with React + Redux + Swagger Mod
 
 ## Web Service
 
-This RESTful Web Service makes use of TypeORM to automatically generate models based on our database. In that way, we can deal with our stored data as objects, ideal for a typed environment (TypeScript). Every (or almost) endpoints are previously validated and authenticated via a middleware. So if the request doesn't have a valid token (JWT), it will return a 401/403 code right away. If the token is valid, the controller will receive the authenticated user and, at that point, it's guaranteed the user is properly authenticated.
+This RESTful Web Service makes use of TypeORM to automatically generate models based on the database. In that way, we can deal with our stored data as objects, ideal for a typed environment (TypeScript in this case). Every (or almost) endpoint is previously validated and authenticated via a middleware. So if the request doesn't have a valid token (JWT), it will return a 401/403 response code right away. If the token is valid, the controller will receive the authenticated user and, at that point, it's guaranteed the user is properly authenticated.
 
 *What is a JWT and why we use it to make stateless authentications*
 [*5 Easy Steps to Understanding JSON Web Tokens (JWT)*
@@ -62,7 +62,7 @@ On client/web service: `npm start` to start the service.
 - [ ] Sign In and forget password features. 
 - [ ] Client: refactor the code putting all the API calls on its respective middleware thunks, and not in redux middleware.
 - [ ] Client: remove inline styles creating proper style classes on a scss file.
-- [ ] API: refactor the code making it run time exception proof (try-catch).
+- [ ] API: refactor the code making it runtime exception proof (try-catch).
 - [ ] API: optimize endpoint outputs.
 - [ ] Make all file names consistent.
 - [ ] Create environment variables to explicitly set the database's auth data, services ports etc. For now everything is statically declared. Not epic.
@@ -70,6 +70,7 @@ On client/web service: `npm start` to start the service.
 - [ ] Unit tests implementation.
 - [ ] Client: refactor some components to improve the readability.
 - [ ] Client: change thumbnail 😅
+- [ ] Clean messy code
 
 
 Pull requests are very welcome! If you have any suggestions, please get in touch or create a PR. Feel free to fork this repository as well :)
